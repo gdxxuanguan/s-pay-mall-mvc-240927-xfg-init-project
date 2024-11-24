@@ -281,3 +281,26 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 24-11-20.21:13:08.592 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8092"]
 24-11-20.21:13:08.605 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8092 (http) with context path ''
 24-11-20.21:13:08.611 [main            ] INFO  Application            - Started Application in 1.245 seconds (JVM running for 1.677)
+24-11-22.14:07:15.543 [main            ] INFO  Application            - Starting Application using Java 1.8.0_432 on yanami with PID 23624 (D:\projects\s-pay-mall-mvc-240927-xfg-init-project\s-pay-mall-web\target\classes started by 22673 in D:\projects\s-pay-mall-mvc-240927-xfg-init-project)
+24-11-22.14:07:15.545 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-11-22.14:07:16.086 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+24-11-22.14:07:16.091 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+24-11-22.14:07:16.091 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-11-22.14:07:16.091 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-11-22.14:07:16.168 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-11-22.14:07:16.168 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 592 ms
+24-11-22.14:07:16.457 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+24-11-22.14:07:16.470 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+24-11-22.14:07:16.478 [main            ] INFO  Application            - Started Application in 1.207 seconds (JVM running for 2.047)
+24-11-22.14:08:43.073 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-11-22.14:08:43.073 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-11-22.14:08:43.074 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-11-22.14:08:43.105 [http-nio-8080-exec-1] INFO  WeixinPortalController - 微信公众号验签信息开始 [77a4fd7923935960b813c3c5b35a9984f9d0d060, 1732255716, 1580552355, 2893171026942337006]
+24-11-22.14:08:43.112 [http-nio-8080-exec-1] INFO  WeixinPortalController - 微信公众号验签信息完成 check：true
+24-11-22.14:09:03.154 [http-nio-8080-exec-3] INFO  WeixinPortalController - 接收微信公众号信息请求oacK_6GpKiQywhtyvv1tQ2Ow-PTM开始 <xml><ToUserName><![CDATA[gh_e1246f479693]]></ToUserName>
+<FromUserName><![CDATA[oacK_6GpKiQywhtyvv1tQ2Ow-PTM]]></FromUserName>
+<CreateTime>1732255736</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哈姆]]></Content>
+<MsgId>24799938169932505</MsgId>
+</xml>
