@@ -8,6 +8,7 @@ import cn.bugstack.service.ILoginService;
 import cn.bugstack.service.weixin.IWeixinApiService;
 import com.google.common.cache.Cache;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import retrofit2.Call;
 
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class WeixinLoginServiceImpl implements ILoginService {
@@ -32,16 +34,22 @@ public class WeixinLoginServiceImpl implements ILoginService {
     private IWeixinApiService weixinApiService;
     @Resource
     private Cache<String,String> openidToken;
+    @Resource
+    private RedisTemplate<String, String> redisTemplate;
+
+
 
     @Override
     public String createQrCodeTicket() throws Exception {
-        String accessToken = weixinAccessToken.getIfPresent(appid);
+//        String accessToken = weixinAccessToken.getIfPresent(appid);
+        String accessToken = redisTemplate.opsForValue().get(appid);
         if(accessToken == null){
             Call<WeixinTokenRes> call=weixinApiService.getToken("client_credential", appid, appSecret);
             WeixinTokenRes weixinTokenRes=call.execute().body();
             assert weixinTokenRes!=null;
             accessToken=weixinTokenRes.getAccess_token();
-            weixinAccessToken.put(appid,accessToken);
+//            weixinAccessToken.put(appid,accessToken);
+            redisTemplate.opsForValue().set(appid,accessToken,2, TimeUnit.HOURS);
         }
 
         WeixinQrCodeReq weixinQrCodeReq=WeixinQrCodeReq.builder()
