@@ -1,7 +1,9 @@
 package cn.bugstack.config;
 
+import cn.bugstack.listener.OrderPaySuccessListener;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import com.google.common.eventbus.EventBus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,5 +20,12 @@ public class GuavaConfig {
     @Bean(name="openidToken")
     public Cache<String,String> openidToken(){
         return CacheBuilder.newBuilder().expireAfterWrite(1, TimeUnit.HOURS).build();
+    }
+
+    @Bean
+    public EventBus eventBusListener(OrderPaySuccessListener listener){
+        EventBus eventBus = new EventBus();
+        eventBus.register(listener);
+        return eventBus;
     }
 }

@@ -1,4 +1,20 @@
+24-11-27.18:41:42.634 [main            ] INFO  Application            - Starting Application using Java 1.8.0_361 on DESKTOP-9VIDTET with PID 21956 (E:\projects\s-pay-mall-mvc-240927-xfg-init-project\s-pay-mall-web\target\classes started by roxy in E:\projects\s-pay-mall-mvc-240927-xfg-init-project)
+24-11-27.18:41:42.636 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-11-27.18:41:43.168 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-27.18:41:43.170 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-27.18:41:43.194 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-11-27.18:41:43.562 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+24-11-27.18:41:43.570 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+24-11-27.18:41:43.570 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-11-27.18:41:43.570 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-11-27.18:41:43.715 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-11-27.18:41:43.715 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1054 ms
+24-11-27.18:41:44.817 [main            ] INFO  Version                - Redisson 3.26.0
 24-11-27.18:41:58.130 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'weixinLoginServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:16379
+24-11-27.18:41:58.132 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-11-27.18:41:58.142 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 24-11-27.18:41:58.157 [main            ] ERROR SpringApplication      - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'weixinLoginServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfigurationV2.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: java.util.concurrent.ExecutionException: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:16379
 	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
@@ -154,3 +170,30 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:750)
+24-11-27.18:44:06.826 [main            ] INFO  Application            - Starting Application using Java 1.8.0_361 on DESKTOP-9VIDTET with PID 15140 (E:\projects\s-pay-mall-mvc-240927-xfg-init-project\s-pay-mall-web\target\classes started by roxy in E:\projects\s-pay-mall-mvc-240927-xfg-init-project)
+24-11-27.18:44:06.827 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-11-27.18:44:07.374 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-27.18:44:07.376 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-27.18:44:07.400 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-11-27.18:44:07.769 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+24-11-27.18:44:07.776 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+24-11-27.18:44:07.776 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-11-27.18:44:07.776 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-11-27.18:44:07.926 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-11-27.18:44:07.926 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1074 ms
+24-11-27.18:44:09.259 [main            ] INFO  Version                - Redisson 3.26.0
+24-11-27.18:44:10.302 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-27.18:44:10.440 [redisson-netty-1-19] INFO  ConnectionsHolder      - 24 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-27.18:44:10.988 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-27.18:44:11.014 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+24-11-27.18:44:11.022 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+24-11-27.18:44:11.032 [main            ] INFO  Application            - Started Application in 4.507 seconds (JVM running for 5.802)
+24-11-27.18:44:12.940 [RMI TCP Connection(2)-192.168.137.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-11-27.18:44:12.940 [RMI TCP Connection(2)-192.168.137.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-11-27.18:44:12.941 [RMI TCP Connection(3)-192.168.137.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-11-27.18:44:12.941 [RMI TCP Connection(2)-192.168.137.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-11-27.18:44:13.237 [RMI TCP Connection(3)-192.168.137.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-11-27.18:44:20.701 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:10001 productId:10001
+24-11-27.18:44:20.911 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:10001 productId:100001 orderId:0423886702572134
+24-11-27.18:49:04.411 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-11-27.18:49:04.421 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
