@@ -31,15 +31,15 @@
         order by id desc
             limit 1
     </select>
-    <select id="queryTimeoutCloseOrderList" parameterType="cn.bugstack.domain.po.PayOrder" resultMap="dataMap">
+    <select id="queryTimeoutCloseOrderList" resultMap="dataMap">
         select order_id as orderId from pay_order
-        where status='PAY_WAIT' and now()-update_time >= INTERVAL 30 MUNUTE
+        where status='PAY_WAIT' and now()-INTERVAL 30 MINUTE >= update_time
         order by id ASC
         LIMIT 50
     </select>
     <select id="queryNoPayNotifyOrder" resultMap="dataMap">
         select order_id as orderId from pay_order
-        where status='PAY_WAIT' and now()-update_time >= INTERVAL 1 MUNUTE
+        where status='PAY_WAIT' and now()-INTERVAL 1 MINUTE>=update_time
         order by id ASC
         LIMIT 50
     </select>

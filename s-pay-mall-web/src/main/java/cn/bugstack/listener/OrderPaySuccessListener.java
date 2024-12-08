@@ -11,6 +11,6 @@ public class OrderPaySuccessListener {
 
     @Subscribe
     public void handleEvent(String paySuccessMessage) {
-        log.info("收到支付成功回调 {}",paySuccessMessage);
+        log.info("收到支付成功回调  {}",paySuccessMessage);
     }
 }

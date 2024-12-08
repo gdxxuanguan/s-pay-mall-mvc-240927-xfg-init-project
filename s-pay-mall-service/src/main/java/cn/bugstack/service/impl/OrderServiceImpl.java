@@ -69,8 +69,6 @@ public class OrderServiceImpl implements IOrderService {
                     .orderId(payOrder.getOrderId())
                     .payUrl(payOrder.getPayUrl())
                     .build();
-
-            //todo
         }
         //2.首次下单,查询商品，创建订单
         ProductVO productVO=productRPC.queryProductByProductId(shopCartReq.getProductId());
